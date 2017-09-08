@@ -3,7 +3,7 @@
         <nav class="nav blog-nav">
           <a class="nav-link active" href="{{ url('/') }}">Home</a>
           <a class="nav-link" href="#">Stats</a>
-          <a class="nav-link" href="#">Owner Stats</a>
+          <a class="nav-link" href="{{ url('/ownerstats') }}">Owner Stats</a>
           <a class="nav-link" href="#">New hires</a>
           <a class="nav-link" href="#">About</a>
 

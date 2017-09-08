@@ -4,8 +4,8 @@
 
 // Route::get('/tasks/{task}', 'TasksController@show');
 
-//Posts Controllers
 
+//Posts Controllers
 
 Route::get('/', 'PostsController@index')->name('home');
 
@@ -44,3 +44,7 @@ Route::get('/login', 'SessionsController@create');
 Route::post('/login', 'SessionsController@store');
 
 Route::get('/logout','SessionsController@destroy');
+
+//OwnerStats Controllers
+
+Route::get('/ownerstats', 'OwnerStatsController@index');
