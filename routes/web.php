@@ -50,4 +50,7 @@ Route::get('/logout','SessionsController@destroy');
 Route::get('/ownerstats', 'OwnerStatsController@index');
 
 //figure out where the end point for uri lands
+
+// Route::get('/ownertats/ajax', array('as' => 'ownerstats.ajax', 'uses' => 'OwnerStatsController@getSeasonStats'));
+
 Route::get('/ownertats/ajax', 'OwnerStatsController@getSeasonStats');

@@ -27,7 +27,8 @@
     $.ajax({
 
         type: "GET",
-        url: "ownerStats/ajax.php?season_year="+season_year,
+        url: "ajax.php?season_year="+season_year,
+        dataType:'html',
         success: function(response){
 
         $('#season_stats_table').html(response);
