@@ -13,9 +13,22 @@ class OwnerStatsController extends Controller
     {
 
 
-    	$records = OwnerStats::all();
+    	$seasonYear = OwnerStats::select('season_id')->distinct()->get();
 
-    	return view('ownerStats.index' , compact('records'));
+    	return view('ownerStats.index' , compact('seasonYear'));
+
+    }
+
+    public function getSeasonStats(Request $request)
+    {
+
+    	$seasonYear = $request->get('season_id');
+
+    	$seasonStats = OwnerStats::where('season_id', $seasonYear)
+    					->get();
+
+    	return response()->json(['response' => '$seasonStats']);
+
 
     }
 

@@ -6,17 +6,16 @@
 </div>
 
 <script>      
-    $('#selected_season_id').change(function(){
+    $('#season_year').change(function(){
 
-        var season_id = this.value;
-        var league_id = <?php echo $league_id; ?>;
-               
+        var season_year = this.value;
+        
            
-            //if(season_id){
     $.ajax({
 
         type: "GET",
-        url: "ajax.php?season_id="+season_id+"&league_id="+league_id,
+        url: "ajax.php?season_year="+season_year
+        ,
         success: function(response){
 
         $('#season_stats_table').html(response);
