@@ -18,6 +18,7 @@
 <div class="table-responsive" id="season_stats_table">         
 </div>
 
+<meta name="_token" content="{!! csrf_token() !!}" />
 <script type ="text/javascript">      
     $('#season_year').change(function(){
 
@@ -27,11 +28,12 @@
     $.ajax({
 
         type: "GET",
-        url: "ajax.php?season_year="+season_year,
-        dataType:'html',
-        success: function(response){
+        url: "/ownerstats/"+season_year,
+        data: {'season_year':season_year},
+        success: function(data){
 
-        $('#season_stats_table').html(response);
+
+        $('#season_stats_table').html(data);
 
             }
 
