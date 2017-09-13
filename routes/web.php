@@ -53,4 +53,4 @@ Route::get('/ownerstats', 'OwnerStatsController@index');
 
 // Route::get('/ownerstats/ajax', array('as' => 'ownerstats.ajax', 'uses' => 'OwnerStatsController@getSeasonStats'));
 
-Route::get('/ownerstats/{year}', 'OwnerStatsController@show');
+Route::get('/ownerstats/{seasonYear}', 'OwnerStatsController@show');
