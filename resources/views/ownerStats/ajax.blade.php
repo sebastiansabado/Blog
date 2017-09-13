@@ -35,10 +35,6 @@
                 </tbody>
             </table>
 
-    <p>{{$seasonStats->first()}}</p>
-
-    {{var_dump($seasonStats)}}
-
 <!-- <script>
         $(document).ready(function() {
             $('.table').DataTable();
