@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<table class="table table-striped table-bordered dt-responsive no-wrap" id="stats_table">
+<table class="table table-striped table-bordered" id="stats_table">
                 <thead>
                   <tr>
                     <th>Ranks</th>
@@ -34,9 +34,12 @@
     @endforeach
                 </tbody>
             </table>
-
-<!-- <script>
+<script>
         $(document).ready(function() {
-            $('.table').DataTable();
+            $('.table').DataTable(
+
+                pageResize: true
+
+                );
             });
-    </script> -->
+    </script>

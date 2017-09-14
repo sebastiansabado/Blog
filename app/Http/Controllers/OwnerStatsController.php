@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\OwnerStats;
+use Yajra\Datatables\Datatables;
 
 
 class OwnerStatsController extends Controller
