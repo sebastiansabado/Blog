@@ -1,25 +1,36 @@
 @extends('layouts.master')
 
 @section('content')
-<div class="row">
-	<div class="form-group">
-	    <label>Select League Year</label>
-	        <select class="form-control" id="season_year">
-	                <option value="" >Select League Year</option>
-	                 	@foreach ($seasonYear as $year)
 
-	                          <option value="{{ $year->season_id }}"> {{ $year->season_id }}</option>
+	<div class="container">
 
-	                    @endforeach
-	                 </select>
+		<div class="col-sm-4">
+
+			<div class="form-group" >	    
+
+			    <select class="form-control" id="season_year">
+
+			        <option value="" >Select League Year</option>
+			            @foreach ($seasonYear as $year)
+
+			                <option value="{{ $year->season_id }}"> {{ $year->season_id }}</option>
+
+			             @endforeach
+
+			        </select>
+			</div>
+
+		</div>
+
 	</div>
-</div>
 
-<div class="row">
-	<div class="col-8">
+
+	<div class="col-sm-8">
+
 		<div class="table-responsive" id="season_stats_table"> 
 
-			<table class="table table-striped table-bordered table-condensed" id="stats_table">
+			<table class="table table-bordered" id="stats_table">
+
 	                <thead>
 	                  <tr>
 	                    <th>Ranks</th>
@@ -36,32 +47,17 @@
 	                  </tr>
 	                </thead>
 	                <tbody>
-	   
-	                  <tr>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-	                    <td></td>
-
-	                  </tr>
 
 	                </tbody>
+
 	            </table>
+
 
 		</div>     
 
 	</div>
-</div>
 
 <meta name="_token" content="{!! csrf_token() !!}" />
-<script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
 <script type ="text/javascript">      
     $('#season_year').change(function(){
 
@@ -85,10 +81,11 @@
     });           
         
 </script>
-
-
-  	
-    
+<script>
+        $(document).ready(function() {
+            $('#stats_table').DataTable();
+            });
+</script>
 
 
 @endsection

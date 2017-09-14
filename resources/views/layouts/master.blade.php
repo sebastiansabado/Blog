@@ -18,6 +18,12 @@
 
     <!-- Custom styles for this template -->
     <link href="/css/app.css" rel="stylesheet">
+    
+    <!-- DataTables JS -->
+    <script src="//cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+    <!-- DataTables CSS -->
+     <link rel="stylesheet" type="text/css" href="//cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css">
   </head>
 
  

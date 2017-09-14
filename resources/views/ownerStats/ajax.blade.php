@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<table class="table table-striped table-bordered" id="stats_table">
+<table class="display table-bordered table-striped cell-border nowrap" id="prepared_stats">
                 <thead>
                   <tr>
                     <th>Ranks</th>
@@ -36,10 +36,6 @@
             </table>
 <script>
         $(document).ready(function() {
-            $('.table').DataTable(
-
-                pageResize: true
-
-                );
+            $('#prepared_stats').DataTable();
             });
-    </script>
+</script>
