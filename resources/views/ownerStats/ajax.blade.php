@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<table class="display table-bordered table-striped cell-border nowrap" id="prepared_stats">
+<table class="display table-bordered cell-border nowrap" id="prepared_stats">
                 <thead>
                   <tr>
                     <th>Ranks</th>

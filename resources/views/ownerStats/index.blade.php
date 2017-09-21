@@ -10,7 +10,7 @@
 
 			    <select class="form-control" id="season_year">
 
-			        <option value="" >Select League Year</option>
+			        <option value="" >Select A Season</option>
 			            @foreach ($seasonYear as $year)
 
 			                <option value="{{ $year->season_id }}"> {{ $year->season_id }}</option>
